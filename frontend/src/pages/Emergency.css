@@ -1,0 +1,220 @@
+.emergency-page {
+    padding-bottom: var(--space-8);
+}
+
+/* Header */
+.emergency-header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+    position: relative;
+}
+
+.emergency-header__pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--color-danger-glow);
+    animation: emergencyPulse 2s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes emergencyPulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.emergency-header__icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-3);
+    filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.5));
+}
+
+.emergency-header__title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-danger-light);
+    letter-spacing: -0.02em;
+}
+
+.emergency-header__subtitle {
+    color: var(--color-text-secondary);
+    margin-top: var(--space-1);
+}
+
+/* Call Button */
+.emergency-call-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    width: 100%;
+    padding: var(--space-8) var(--space-6);
+    background: linear-gradient(135deg, var(--color-danger) 0%, #991B1B 100%);
+    border-radius: var(--radius-2xl);
+    color: white !important;
+    text-decoration: none;
+    -webkit-text-fill-color: white;
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-base);
+    margin-bottom: var(--space-4);
+    /* Extra large touch target for emergencies */
+    min-height: 120px;
+}
+
+.emergency-call-btn:hover,
+.emergency-call-btn:active {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(239, 68, 68, 0.6);
+}
+
+.emergency-call-btn__icon {
+    font-size: 2.5rem;
+}
+
+.emergency-call-btn__text {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.emergency-call-btn__number {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.05em;
+}
+
+.emergency-no-contact {
+    text-align: center;
+    padding: var(--space-8) !important;
+    border: 2px dashed var(--color-warning);
+    margin-bottom: var(--space-4);
+}
+
+.emergency-no-contact__text {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-warning-light);
+    margin-bottom: var(--space-2);
+}
+
+/* 112 Button */
+.emergency-112-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    width: 100%;
+    padding: var(--space-4) var(--space-6);
+    background: var(--color-bg-card);
+    border: 2px solid var(--color-danger);
+    border-radius: var(--radius-xl);
+    color: var(--color-danger-light) !important;
+    -webkit-text-fill-color: var(--color-danger-light);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    margin-bottom: var(--space-8);
+    min-height: 56px;
+}
+
+.emergency-112-btn:hover {
+    background: var(--color-danger-glow);
+}
+
+/* Patient Information */
+.emergency-info {
+    margin-top: var(--space-4);
+}
+
+.emergency-info__title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-4);
+    color: var(--color-text-primary);
+}
+
+.emergency-info__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.emergency-info__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-4) !important;
+}
+
+.emergency-info__label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: var(--font-weight-medium);
+}
+
+.emergency-info__value {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.emergency-info__value--large {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-extrabold);
+}
+
+.emergency-info__value--blood {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-danger-light);
+}
+
+.emergency-info__card--blood {
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.05) !important;
+}
+
+/* Medical Conditions */
+.emergency-conditions {
+    margin-top: var(--space-4);
+}
+
+.emergency-conditions__title {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-3);
+    color: var(--color-text-secondary);
+}
+
+.emergency-conditions__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.emergency-conditions__tag {
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-warning-glow);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-warning-light);
+}

@@ -1,0 +1,8 @@
+.medications-page {
+    padding-bottom: var(--space-4);
+}
+
+.medications-list {
+    display: flex;
+    flex-direction: column;
+}
