@@ -1,0 +1,96 @@
+.med-card {
+    margin-bottom: var(--space-4);
+}
+
+.med-card--inactive {
+    opacity: 0.5;
+}
+
+.med-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--space-3);
+}
+
+.med-card__name {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: 2px;
+}
+
+.med-card__dosage {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary-light);
+    font-weight: var(--font-weight-medium);
+}
+
+.med-card__actions {
+    display: flex;
+    gap: var(--space-1);
+}
+
+.med-card__action-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: var(--color-bg-tertiary);
+    transition: all var(--transition-fast);
+    font-size: 0.9rem;
+}
+
+.med-card__action-btn:hover {
+    background: var(--color-bg-card-hover);
+    transform: scale(1.1);
+}
+
+.med-card__action-btn--delete:hover {
+    background: var(--color-danger-glow);
+}
+
+.med-card__timings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+}
+
+.med-card__time-chip {
+    padding: var(--space-1) var(--space-3);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+}
+
+.med-card__instructions {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-sm);
+}
+
+.med-card__stock {
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+}
+
+.med-card__stock-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-1);
+}
+
+.med-card__stock-low {
+    color: var(--color-danger-light);
+    font-weight: var(--font-weight-semibold);
+}

@@ -1,0 +1,166 @@
+.profile-page {
+    padding-bottom: var(--space-8);
+}
+
+/* Avatar */
+.profile-avatar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.profile-avatar__circle {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-info));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: white;
+    flex-shrink: 0;
+}
+
+.profile-avatar__name {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Sections */
+.profile-section {
+    margin-bottom: var(--space-6);
+}
+
+.profile-section__title {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-3);
+}
+
+.profile-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
+
+/* Conditions tags */
+.profile-conditions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+}
+
+.profile-condition-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.profile-condition-remove {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background: var(--color-danger-glow);
+    color: var(--color-danger-light);
+    font-size: 0.6rem;
+    transition: all var(--transition-fast);
+}
+
+.profile-condition-remove:hover {
+    background: var(--color-danger);
+    color: white;
+}
+
+.profile-add-condition {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.profile-add-condition .form-input {
+    flex: 1;
+}
+
+/* Toggle switch */
+.profile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+}
+
+.profile-toggle__label {
+    font-weight: var(--font-weight-medium);
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle__slider {
+    position: absolute;
+    inset: 0;
+    background: var(--color-bg-tertiary);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.toggle__slider::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color-text-muted);
+    transition: all var(--transition-base);
+}
+
+.toggle input:checked+.toggle__slider {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.toggle input:checked+.toggle__slider::before {
+    transform: translateY(-50%) translateX(24px);
+    background: white;
+}
+
+/* Logout */
+.profile-logout {
+    color: var(--color-danger-light) !important;
+    border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+.profile-logout:hover {
+    background: var(--color-danger-glow) !important;
+}

@@ -1,0 +1,74 @@
+.med-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.med-form__timings {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.med-form__timing-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.med-form__time-input {
+    flex: 1;
+    color-scheme: dark;
+}
+
+.med-form__remove-time {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background: var(--color-danger-glow);
+    color: var(--color-danger-light);
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-fast);
+}
+
+.med-form__remove-time:hover {
+    background: var(--color-danger);
+    color: white;
+}
+
+.med-form__quick-timings {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.med-form__quick-btn {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-fast);
+}
+
+.med-form__quick-btn:hover {
+    background: var(--color-primary-glow);
+    color: var(--color-primary-light);
+    border-color: var(--color-primary);
+}
+
+.med-form__actions {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+}
+
+.med-form__actions .btn {
+    flex: 1;
+}
